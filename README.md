@@ -1,15 +1,12 @@
-# Talos-systems Talos
+# Homebrew Talos
 
-## How do I install these formulae?
-`brew install talos-systems/talos/<formula>`
+## How do I install osctl?
 
-Or `brew tap talos-systems/talos` and then `brew install <formula>`.
+Installing osctl from this cask is simple:
 
-Or install via URL (which will not receive updates):
+- `brew tap talos-systems/talos`
+- `brew cask install osctl`
 
-```
-brew install https://raw.githubusercontent.com/talos-systems/homebrew-talos/master/Formula/<formula>.rb
-```
+## Resources
 
-## Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
