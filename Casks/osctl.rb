@@ -1,6 +1,6 @@
 cask 'osctl' do
-    version '0.3.0-beta.0'
-    sha256 'cf6335fd21d9ec75e8164ee3b56b5499af14ca831dae3d7de3685724e269661c'
+    version '0.4.0-alpha.6'
+    sha256 'a4b31ca02438fa73a5e34992a831bc3afd79195f0e7b3bb217d035dc876ea4e0'
   
     url "https://github.com/talos-systems/talos/releases/download/v#{version}/osctl-darwin-amd64"
     name 'osctl'
