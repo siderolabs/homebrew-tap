@@ -5,7 +5,7 @@
 Installing osctl from this cask is simple:
 
 - `brew tap talos-systems/talos`
-- `brew cask install osctl`
+- `brew cask install talosctl`
 
 ## Resources
 
