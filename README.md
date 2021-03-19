@@ -1,8 +1,8 @@
 # Homebrew Talos
 
-## How do I install osctl?
+## How do I install talosctl?
 
-Installing osctl from this cask is simple:
+Installing talosctl from this cask is simple:
 
 - `brew tap talos-systems/talos`
 - `brew cask install talosctl`
