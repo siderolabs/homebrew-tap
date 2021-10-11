@@ -5,7 +5,7 @@
 Installing talosctl from this cask is simple:
 
 - `brew tap talos-systems/talos`
-- `brew cask install --no-quarantine talosctl`
+- `brew install --cask --no-quarantine talosctl`
 
 `--no-quarantine` is flag is required as `talosctl` is not
 [notarized](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) yet.
