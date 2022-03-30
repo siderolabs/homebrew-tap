@@ -4,7 +4,7 @@
 
 Installing talosctl from this cask is simple:
 
-- `brew tap talos-systems/talos`
+- `brew tap siderolabs/talos`
 - `brew install --cask --no-quarantine talosctl`
 
 `--no-quarantine` is flag is required as `talosctl` is not
@@ -13,7 +13,7 @@ Installing talosctl from this cask is simple:
 ## Updates
 
 Currently, updates of this repository are manual
-(see [talos-systems/talos#2148](https://github.com/talos-systems/talos/issues/2148)) and may be delayed.
+(see [siderolabs/talos#2148](https://github.com/siderolabs/talos/issues/2148)) and may be delayed.
 If you rely on this tap, please send pull requests.
 
 ## Resources
