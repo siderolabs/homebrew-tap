@@ -20,4 +20,6 @@ cask "talosctl" do
   name "talosctl"
   desc "A CLI for out-of-band management of Kubernetes nodes created by Talos"
   homepage "https://talos.dev"
+  
+  zap trash: "~/.talos"
 end
