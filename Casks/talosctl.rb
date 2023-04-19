@@ -4,17 +4,17 @@
 # https://github.com/Homebrew/homebrew-cask/tree/master/doc/cask_language_reference
 
 cask "talosctl" do
-  version "1.3.6"
+  version "1.4.0"
 
   on_intel do
-    sha256 "9e24028f6bd703d27a48d6c7c4552e086408ecb78d681a7f1cde25d08b84724e"
+    sha256 "c9585990b82047386d2d42f671da4f312c91f974961ecfdda9f396fa7cbdea7b"
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-amd64",
         verified: "github.com/siderolabs/talos/"
 
     binary "talosctl-darwin-amd64", target: "talosctl"
   end
   on_arm do
-    sha256 "bb7e9439dba446361f607265ffe491e31d9d837561654386666f8312c0084fde"
+    sha256 "44fe9fa944eae1cf425c0a59ba1d59e7d260059079e02426bb5d78f8304397e6"
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-arm64",
         verified: "github.com/siderolabs/talos/"
 
