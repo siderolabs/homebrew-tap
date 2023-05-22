@@ -1,22 +1,22 @@
-# Homebrew Talos
+# Talos Homebrew Tap
 
+- 🔥 Easy installation of [talosctl](https://github.com/siderolabs/talos), the reference CLI to use Talos OS
+- ⭐ Works on macOS (Intel/ARM) and Linux (amd64/arm64/armv7)
 ## How do I install talosctl?
 
-Installing talosctl from this cask is simple:
+Installing talosctl is simple:
+```
+brew install siderolabs/talos/talosctl
+```
 
-- `brew tap siderolabs/talos`
-- `brew install --cask --no-quarantine talosctl`
+You can also only add the tap which makes formulae within it available in search results (`brew search` output):
 
-`--no-quarantine` is flag is required as `talosctl` is not
-[notarized](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) yet.
+```
+brew tap siderolabs/talos
+brew install talosctl
+```
 
-Note that the arguments must be passed when upgrading as well:
-
-- `brew upgrade --cask --no-quarantine talosctl`
-
-If you accidentally upgrade the forumla without the `--no-quarantine` argument you may have to reinstall talosctl:
-
-- `brew reinstall --cask --no-quarantine talosctl`
+Note: since the `v1.4.4` release the `talosctl` Cask is deprecated in favor of a more universal `talosctl` formula. If you have the Cask installed, you need to uninstall it first: `brew uninstall --cask talosctl`.
 
 ## Updates
 
