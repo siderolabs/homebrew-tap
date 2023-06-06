@@ -4,7 +4,7 @@
 class Talosctl < Formula
   desc "CLI for out-of-band management of Kubernetes nodes created by Talos"
   homepage "https://talos.dev/"
-  version "1.4.4"
+  version "1.4.5"
   license "MPL-2.0"
 
   if OS.mac? && Hardware::CPU.intel?
