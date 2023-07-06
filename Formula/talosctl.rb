@@ -4,29 +4,29 @@
 class Talosctl < Formula
   desc "CLI for out-of-band management of Kubernetes nodes created by Talos"
   homepage "https://talos.dev/"
-  version "1.4.5"
+  version "1.4.6"
   license "MPL-2.0"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-amd64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "09bd2c839e1d3b6f2c497612eeac703cf4a4baf812d8e4b1f821472a043bf435"
+    sha256 "4993b87ab9ae36534ccac314f6d70c456f5bb4bd1a1e4f7921cdf050d6023193"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-arm64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "a794227533ad94211e74a6b4746f661969c69448cec96fcd5cd6249276518b08"
+    sha256 "9e34e1606730469063d31d4446cce2ffbd91264533bde3b27391a05aa5540b23"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-linux-amd64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "cdf9e6f753da911763ca70f377db1b47f1ce8d0448921179035364d7a05fb8eb"
+    sha256 "0786c8fe9be1965efdb8306228f3079b7d28bb5120bbff5ad7746ad66ae3d8d0"
   elsif OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-linux-armv7",
       verified: "github.com/siderolabs/talos/"
-    sha256 "92804afb7b9a14acba605d80e9a2f2ff7430cb10524279f0ff0a7ffac3be1003"
+    sha256 "31486430646bc41d0857c6dc1eebead2d1f2f59f1ee82a1a2bc3cbedbf186eaf"
   elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-linux-arm64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "bf93060dea48471043ffd401b871ee5dbf5145b7622296e60308d25eed3ecd14"
+    sha256 "418541dd402f72d8daaa28873cd0a489777031ebc8807d627b105f3d62ac6f32"
   else
     odie "Unexpected platform!"
   end
