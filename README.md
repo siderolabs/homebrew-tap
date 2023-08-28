@@ -16,8 +16,6 @@ brew tap siderolabs/talos
 brew install talosctl
 ```
 
-Note: since the `v1.4.4` release the `talosctl` Cask is deprecated in favor of a more universal `talosctl` formula. If you have the Cask installed, you need to uninstall it first: `brew uninstall --cask talosctl`.
-
 ## Updates
 
 Currently, updates of this repository are manual
