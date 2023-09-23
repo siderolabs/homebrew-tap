@@ -4,18 +4,13 @@ set -euo pipefail
 
 formula="./Formula/talosctl.rb"
 tmp_file="/tmp/talosctl.tmp"
+new_ver="${1}"
 
 if [ "$#" -ne 1 ]; then
     echo "    usage:   ${0} <version>"
     echo "    example: ${0} 1.4.7"
     exit 1
 fi
-
-current_ver="$(grep -Po 'version "\K(\d+\.\d+\.\d+)' "${formula}")"
-new_ver="${1}"
-
-echo "===> Updating version in formula \"${formula}\": ${current_ver} -> ${new_ver}"
-sed -i "s/${current_ver}/${new_ver}/" ${formula}
 
 lines="$(grep -Po '(url "\K[^"]+)|(sha256 "\K[^"]+)' "${formula}")"
 while IFS= read -r url && read -r hash; do
@@ -32,5 +27,9 @@ while IFS= read -r url && read -r hash; do
 
     rm ${tmp_file}
 done <<< "${lines}"
+
+current_ver="$(grep -Po 'version "\K(\d+\.\d+\.\d+)' "${formula}")"
+echo "===> Updating version in formula \"${formula}\": ${current_ver} -> ${new_ver}"
+sed -i "s/$(echo ${current_ver} | sed 's|\.|\\.|g')/${new_ver}/" ${formula}
 
 echo "===> Done."
