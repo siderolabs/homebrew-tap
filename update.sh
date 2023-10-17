@@ -4,13 +4,14 @@ set -euo pipefail
 
 formula="./Formula/talosctl.rb"
 tmp_file="/tmp/talosctl.tmp"
-new_ver="${1}"
 
 if [ "$#" -ne 1 ]; then
     echo "    usage:   ${0} <version>"
     echo "    example: ${0} 1.4.7"
     exit 1
 fi
+
+new_ver="${1}"
 
 lines="$(grep -Po '(url "\K[^"]+)|(sha256 "\K[^"]+)' "${formula}")"
 while IFS= read -r url && read -r hash; do
