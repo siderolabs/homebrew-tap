@@ -6,13 +6,13 @@
 
 Installing talosctl is simple:
 ```
-brew install siderolabs/talos/talosctl
+brew install siderolabs/tap/talosctl
 ```
 
 You can also only add the tap which makes formulae within it available in search results (`brew search` output):
 
 ```
-brew tap siderolabs/talos
+brew tap siderolabs/tap
 brew install talosctl
 ```
 
