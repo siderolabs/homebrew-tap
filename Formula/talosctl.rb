@@ -43,6 +43,9 @@ class Talosctl < Formula
     elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       bin.install "talosctl-linux-arm64" => "talosctl"
     end
+  end
+
+  def post_install
     generate_completions_from_executable(bin/"talosctl", "completion")
   end
 
