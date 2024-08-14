@@ -1,4 +1,4 @@
-class SideroLabsTools < Formula
+class SideroTools < Formula
     desc "Meta Package for common Sidero Labs tools"
     version "1.0.0"
     homepage "https://github.com/siderolabs/"
@@ -11,7 +11,7 @@ class SideroLabsTools < Formula
     depends_on "siderolabs/tap/talosctl"
 
     def install
-        (bin+"siderolabstools").write <<-EOS
+        (bin+"siderotools").write <<-EOS
             #!/bin/sh
 
             echo "The Sidero Labs Tools were installed installed!"
