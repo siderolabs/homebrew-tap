@@ -4,25 +4,25 @@
 class Omnictl < Formula
   desc "CLI for Omni - SaaS-simple deployment of Kubernetes - on your own hardware."
   homepage "https://omni.siderolabs.com/"
-  version "0.47.1"
+  version "0.48.0"
   license "BUSL-1.1"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-darwin-amd64",
       verified: "github.com/siderolabs/omni/"
-    sha256 "76f65313642464651d9818916b120b52a97b6e0ba932e2112338db59c11c6e09"
+    sha256 "8bae8a8d02eb6a573e8cd42489cb84d20181b818bf7fe89111b5f32271c71be7"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-darwin-arm64",
       verified: "github.com/siderolabs/omni/"
-    sha256 "a02266257a7dd253e2ded8de7b96cac29c7bd35217dadce62ec0ea7e8b2428ec"
+    sha256 "07c42b41fa32ffcf10ace71c1f81e91bb6d06797bf92fb095fb7e19bd6551f6c"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-linux-amd64",
       verified: "github.com/siderolabs/omni/"
-    sha256 "41b3dcabcce5cda0e74c5e1db27edb83658262d06b43bde071d1e420642872fb"
+    sha256 "1e45463143b23e576fa2eea957c1b0d15463e49a7e5953e790ec3c8fe739cdb2"
   elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-linux-arm64",
       verified: "github.com/siderolabs/omni/"
-    sha256 "a6087135e182857d8ce4b40af63dda540a62656f63f201dad8a18f0b1de73e6f"
+    sha256 "3b5e64ac916e6d90b372c1b91c3af8ab358481eac5a8835e1477fc1fd3a307e2"
   else
     odie "Unexpected platform!"
   end
