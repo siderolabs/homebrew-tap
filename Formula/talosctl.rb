@@ -4,29 +4,29 @@
 class Talosctl < Formula
   desc "CLI for out-of-band management of Kubernetes nodes created by Talos"
   homepage "https://talos.dev/"
-  version "1.10.6"
+  version "1.10.7"
   license "MPL-2.0"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-amd64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "2ec7f53ba0f920ff1a3cee70956b67dc838f647a674cbaeea23d3f107d5596e4"
+    sha256 "3ec721f593a659d37c94301944e7896551cf6f7ee016df246550611b7c5cc3cd"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-arm64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "11efa561291647c1cd09826016d282fd6a3dacc76dc5fb946202f8a9f1cc7c08"
+    sha256 "8eff248a1619a79208f00e96f2b3033b32ec8ba57c6dde191ee5416a5e81f535"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-linux-amd64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "c5685d525ab7d31e8aa01e9c64e20afbc65d5daa2c5bd427ec7ba65cf982fa00"
+    sha256 "0fe8a207b7ae925863b4af624bb1e716a28d999f32eb7aba09de4bbf60c2a9ac"
   elsif OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-linux-armv7",
       verified: "github.com/siderolabs/talos/"
-    sha256 "66212d3a63be4541ca23e71a6e661aec22e7a3957adafb0c673543402c4721b4"
+    sha256 "bfbc575c519d81737564838a4e17fd95a1c862da3ec03868ecb3b013d04abf2f"
   elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-linux-arm64",
       verified: "github.com/siderolabs/talos/"
-    sha256 "95fc5913058a5363c2f6d3203c1242b5f0053f44a5c0fe282ff431418967287a"
+    sha256 "27108265ed5797a5d59c4d4833c13de6fb200602df5b440bff6890a6a4f2f11f"
   else
     odie "Unexpected platform!"
   end
