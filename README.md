@@ -15,7 +15,7 @@ brew install siderolabs/tap/sidero-tools
 
 This includes `talosctl`, `omnictl`, `kubectl-oidc_login`, and `kubectl`.
 
-> Note: `kubectl` and `kubectl-oidc_login` ore not maintained by Sidero Labs, but they are included in the meta formulae for convenience.
+> Note: `kubectl` and `kubectl-oidc_login` are not maintained by Sidero Labs, but they are included in the meta formulae for convenience.
 
 ## Install tools separately
 
