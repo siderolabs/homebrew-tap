@@ -10,7 +10,7 @@ class Omnictl < Formula
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-darwin-amd64",
       verified: "github.com/siderolabs/omni/"
-    sha256 "eb9ea503ae108ef0df4e007d66d6ac944a663bfa201ee40f9003efc359b5e07f"
+    sha256 "8e2d1a2deeb9a0e5c08a552aa4711940f4cb7a769d980d44b63d004e61a41d6f"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-darwin-arm64",
       verified: "github.com/siderolabs/omni/"
