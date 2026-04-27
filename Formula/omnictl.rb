@@ -37,10 +37,10 @@ class Omnictl < Formula
     elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       bin.install "omnictl-linux-arm64" => "omnictl"
     end
-  end
 
-  def post_install
-    generate_completions_from_executable(bin/"omnictl", "completion")
+    chmod 0555, bin/"omnictl"
+
+    generate_completions_from_executable(bin/"omnictl", shell_parameter_format: :cobra)
   end
 
   test do
