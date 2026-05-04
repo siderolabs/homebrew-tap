@@ -46,7 +46,7 @@ class Talosctl < Formula
 
     chmod 0555, bin/"talosctl"
 
-    generate_completions_from_executable(bin/"talosctl", shell_parameter_format: :cobra)
+    generate_completions_from_executable(bin/"talosctl", "completion")
   end
 
   test do
