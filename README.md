@@ -38,8 +38,8 @@ Example Usage:
 
 ```
 ./update.sh <tool> <version>
-./update.sh talosctl 1.6.6
-./update.sh omnictl 0.31.0
+./update.sh talosctl 1.13.0
+./update.sh omnictl 1.7.2
 ```
 
 ## Resources
