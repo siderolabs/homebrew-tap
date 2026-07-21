@@ -27,6 +27,25 @@ brew tap siderolabs/tap
 brew install talosctl omnictl
 ```
 
+## Install specific major/minor versions
+
+Versioned formulae are also available for pinned release lines:
+
+```bash
+brew tap siderolabs/tap
+brew install siderolabs/tap/omnictl@1
+brew install siderolabs/tap/omnictl@1.4
+brew install siderolabs/tap/omnictl@1.4.11
+brew install siderolabs/tap/talosctl@1.12
+```
+
+If the unversioned formula is already installed, unlink it first (or uninstall it), as both install the same binary names:
+
+```bash
+brew unlink omnictl talosctl
+brew install siderolabs/tap/omnictl@1.4 siderolabs/tap/talosctl@1.12
+```
+
 ## Updates
 
 Currently, updates of this repository are manual
