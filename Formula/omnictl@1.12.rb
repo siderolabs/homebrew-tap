@@ -1,11 +1,12 @@
 # Copyright Sidero Labs, Inc.
 # SPDX-License-Identifier: BUSL-1.1
 
-class Omnictl < Formula
+class OmnictlAT112 < Formula
   desc "CLI for Omni - SaaS-simple deployment of Kubernetes - on your own hardware."
   homepage "https://omni.siderolabs.com/"
   version "1.12.2"
   license "BUSL-1.1"
+  keg_only :versioned_formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/omni/releases/download/v#{version}/omnictl-darwin-amd64",
