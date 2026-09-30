@@ -1,11 +1,12 @@
 # Copyright Contributors to the Talos project.
 # SPDX-License-Identifier: MPL-2.0
 
-class Talosctl < Formula
+class TalosctlAT114 < Formula
   desc "CLI for out-of-band management of Kubernetes nodes created by Talos"
   homepage "https://talos.dev/"
   version "1.14.2"
   license "MPL-2.0"
+  keg_only :versioned_formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-amd64",
